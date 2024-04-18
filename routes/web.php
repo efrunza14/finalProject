@@ -11,6 +11,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\UserController;
 
+<<<<<<< HEAD
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/terms', function () {
@@ -35,6 +36,32 @@ Route::put('/reviews/{review}', [ReviewController::class, 'update'])->name('revi
 Route::delete('/reviews/{review}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
 
 Route::post('/reviews/{review}/comments', [CommentController::class, 'store'])->name('reviews.comments.store');
+=======
+Route::get('/', [DashboardController::class,'index'])->name('dashboard');
+
+Route::get('/terms', function(){
+    return view('terms');
+});
+
+Route::get('/register', [RegisterController::class,'register'])->name('register');
+Route::post('/register', [RegisterController::class,'store']);
+
+Route::get('/login', [RegisterController::class,'login'])->name('login');
+Route::post('/login', [RegisterController::class,'authenticate']);
+Route::post('/logout', [RegisterController::class,'logout'])->name('logout');
+
+Route::get('/shop', [ShopController::class,'index']);
+
+Route::resource('users', UserController::class)->only('show','edit','update')->middleware('auth');
+
+Route::post('/reviews', [ReviewController::class,'store'])->name('reviews.store');
+Route::get('/reviews/{review}', [ReviewController::class,'show'])->name('reviews.show');
+Route::get('/reviews/{review}/edit', [ReviewController::class,'edit'])->name('reviews.edit');
+Route::put('/reviews/{review}', [ReviewController::class,'update'])->name('reviews.update');
+Route::delete('/reviews/{review}', [ReviewController::class,'destroy'])->name('reviews.destroy');
+
+Route::post('/reviews/{review}/comments', [CommentController::class,'store'])->name('reviews.comments.store');
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
 
 Route::get('/cart', 'CartController@viewCart')->name('cart');
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add_to_cart');
@@ -42,8 +69,12 @@ Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add_to_
 Route::get('/search', [ShopController::class, 'search'])->name('product.search');
 Route::get('/product/{id}', 'ShopController@show')->name('product.show');
 
+<<<<<<< HEAD
 Route::get('profile', [UserController::class, 'profile'])->middleware('auth')->name('profile');
 
 // Route::get('/select-tags', [ShopController::class, 'showTags'])->name('show_tags');
 // Route::get('products/{tagId}', 'ShopController@productsByTag')->name('products.by.tag');
 // Route::get('/filter-products', [ShopController::class, 'filterProducts'])->name('filter_products');
+=======
+Route::get('profile',[UserController::class,'profile'])->middleware('auth')->name('profile');
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f

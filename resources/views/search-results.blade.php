@@ -3,7 +3,11 @@
 @section('content')
     <div class="container">
         <h2>Search Results</h2>
+<<<<<<< HEAD
         @if ($products->isEmpty())
+=======
+        @if($products->isEmpty())
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
             <p>No products found.</p>
         @else
             <div class="row">

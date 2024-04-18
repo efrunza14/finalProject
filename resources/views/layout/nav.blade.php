@@ -9,15 +9,24 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
+<<<<<<< HEAD
                 {{-- @guest --}}
+=======
+                @guest
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{route('login')}}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('register')}}">Register</a>
                     </li>
+<<<<<<< HEAD
                 {{-- @endguest
                 @auth() --}}
+=======
+                @endguest
+                @auth()
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
                     <li class="nav-item">
                         <a class="nav-link" href="/shop">Shop</a>
                     </li>
@@ -25,8 +34,12 @@
                         <a class="nav-link" href="/">Explore</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         {{-- <a class="nav-link" href="{{route('profile')}}">{{ Auth::user()->name }}</a> --}}
                         <a class="nav-link" href="{{route('profile')}}">Maria</a>
+=======
+                        <a class="nav-link" href="{{route('profile')}}">{{ Auth::user()->name }}</a>
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
                     </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
@@ -34,7 +47,11 @@
                             <button class="btn btn-danger btn-sm"type="submit"> Logout </button>
                         </form>
                     </li>
+<<<<<<< HEAD
                 {{-- @endauth --}}
+=======
+                @endauth
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
             </ul>
         </div>
     </div>

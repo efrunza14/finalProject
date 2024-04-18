@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+<<<<<<< HEAD
 use App\Models\Tag;
+=======
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
 
 class ShopController extends Controller
 {
@@ -24,6 +27,7 @@ class ShopController extends Controller
     }
 
     public function show($id)
+<<<<<<< HEAD
     {
         // Găsește produsul în baza de date folosind ID-ul
         $product = Product::findOrFail($id);
@@ -61,4 +65,13 @@ class ShopController extends Controller
 
     //     return view('filtered_products', compact('products'));
     // }
+=======
+{
+    // Găsește produsul în baza de date folosind ID-ul
+    $product = Product::findOrFail($id);
+
+    // Returnează vizualizarea produsului și trimite variabila cu produsul
+    return view('product-detail', compact('product'));
+}
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
 }

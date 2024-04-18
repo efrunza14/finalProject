@@ -12,8 +12,13 @@
     <hr>
     @foreach ($review->comments as $comment)
         <div class="d-flex align-items-start">
+<<<<<<< HEAD
             <img style="width:35px" class="me-2 avatar-sm rounded-circle" src="{{ $comment->user->getImageURL() }}"
                 alt="{{ $comment->user->name }}">
+=======
+            <img style="width:35px" class="me-2 avatar-sm rounded-circle"
+                src="{{$comment->user->getImageURL()}}" alt="{{$comment->user->name}}">
+>>>>>>> 80067199880a2d7d0349f6e0cfa005434ef4d60f
             <div class="w-100">
                 <div class="d-flex justify-content-between">
                     <h6 class="">Elena
